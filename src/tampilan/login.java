@@ -77,14 +77,14 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        BATAL.setText("BATAL");
+        BATAL.setText("CANCEL");
         BATAL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BATALActionPerformed(evt);
             }
         });
 
-        NEW.setText("BUAT AKUN");
+        NEW.setText("REGISTER");
         NEW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NEWActionPerformed(evt);
@@ -98,7 +98,7 @@ public class login extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(LOG)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
                 .addComponent(BATAL)
                 .addGap(47, 47, 47))
             .addGroup(layout.createSequentialGroup()
@@ -113,19 +113,19 @@ public class login extends javax.swing.JFrame {
                             .addComponent(User, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                             .addComponent(Pas)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(NEW))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(101, 101, 101)
-                        .addComponent(jLabel1)))
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(NEW)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(16, 16, 16)
                 .addComponent(jLabel1)
-                .addGap(43, 43, 43)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(User, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -139,7 +139,7 @@ public class login extends javax.swing.JFrame {
                     .addComponent(BATAL))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(NEW)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
@@ -169,12 +169,16 @@ public class login extends javax.swing.JFrame {
            sql = "select * from users where username = '"+User.getText()+"' and password = '"+Pas.getText()+"'";
            rs = stm.executeQuery(sql);
            if(rs.next()){
-               JOptionPane.showMessageDialog(this,"Welcome " + User.getText());
+                JOptionPane.showMessageDialog(this,"Welcome " + User.getText());
+                dispose();
+                Menu_Utama r = new Menu_Utama();
+                r.setVisible(true);
+                this.setVisible(false);
            }
            else{
-               JOptionPane.showMessageDialog(this,"Username or Password wrong");
-               User.setText("");
-               Pas.setText("");
+                JOptionPane.showMessageDialog(this,"Username or Password wrong");
+                User.setText("");
+                Pas.setText("");
            }
         } catch (Exception e) {
             System.err.println(e.getMessage());
