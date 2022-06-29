@@ -4,19 +4,17 @@
  * and open the template in the editor.
  */
 package koneksi;
-
-/**
- *
- * @author IQBAL
- */
-
 import java.sql.*;
 import javax.swing.JOptionPane;
-public class koneksi {
+/**
+ *
+ * @author Rofi Setiawan 
+ */
 
+public class koneksi {
     public Connection con;
     public Statement stm;
-    public Connection config(){
+    public void config(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con=DriverManager.getConnection("jdbc:mysql://localhost/bntechdb", "root", "");
@@ -24,6 +22,5 @@ public class koneksi {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "koneksi gagal "+e.getMessage());
         }
-        return null;
     }
 }

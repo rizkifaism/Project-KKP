@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/PemVis/NetbeansProjects/ApkBntech/src/tampilan/Registrasi.java</file>
-            <file>file:/E:/PemVis/NetbeansProjects/ApkBntech/src/tampilan/barang.java</file>
-            <file>file:/E:/PemVis/NetbeansProjects/ApkBntech/src/tampilan/login.java</file>
-            <file>file:/E:/PemVis/NetbeansProjects/ApkBntech/src/tampilan/Menu_Utama.java</file>
+            <file>file:/E:/PemVis/NetbeansProjects/ApkBntech/src/menu/login.java</file>
+            <file>file:/E:/PemVis/NetbeansProjects/ApkBntech/src/menu/Login.png</file>
+            <file>file:/E:/PemVis/NetbeansProjects/ApkBntech/src/menu/barang.java</file>
+            <file>file:/E:/PemVis/NetbeansProjects/ApkBntech/src/menu/Registrasi.java</file>
+            <file>file:/E:/PemVis/NetbeansProjects/ApkBntech/src/menu/menu.java</file>
         </group>
     </open-files>
 </project-private>
