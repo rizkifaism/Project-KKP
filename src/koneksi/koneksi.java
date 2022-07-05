@@ -17,7 +17,7 @@ public class koneksi {
     public void config(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost/bntechdb", "root", "");
+            con=DriverManager.getConnection("jdbc:mysql://localhost/bntechdb_kkp", "root", "");
             stm = con.createStatement();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "koneksi gagal "+e.getMessage());

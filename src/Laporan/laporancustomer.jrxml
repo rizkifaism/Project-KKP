@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f178ff59-fb49-481c-af33-8b01ab523e3e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from customer order by id_Customer;]]>
+	</queryString>
+	<field name="id_Customer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_Customer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="noHp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat_Customer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="22221862-3957-4d48-b7fa-be5b84c5abcf" x="205" y="84" width="145" height="20"/>
+				<textElement>
+					<font fontName="Roboto" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="646f41b4-9743-4d11-ad7b-1ca5d1ba2d63" x="100" y="32" width="354" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto" size="9"/>
+				</textElement>
+				<text><![CDATA[Sedayu Square Blok J No. 8, Cengkareng Barat, Cengkareng, Jakarta Barat ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="5629bbc8-bae3-4521-a519-a598ebf55d2e" x="5" y="0" width="99" height="62"/>
+				<imageExpression><![CDATA["E:\\Materi Kuliah\\Materi Semester 6\\Pemrograman Visual\\Project_Bntech\\src\\gambar\\logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="19f684bd-0fd1-48c8-9622-09dd9e331285" x="222" y="52" width="111" height="20"/>
+				<textElement>
+					<font fontName="Roboto"/>
+				</textElement>
+				<text><![CDATA[Telp. (021) 5239 5360]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ed9092ac-11ce-43d7-af64-f9d6a23cde22" x="104" y="0" width="347" height="32"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT Shuanghui Power Prima (Bntech Energi)]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="5629bbc8-bae3-4521-a519-a598ebf55d2e" x="456" y="0" width="99" height="62"/>
+				<imageExpression><![CDATA["E:\\Materi Kuliah\\Materi Semester 6\\Pemrograman Visual\\Project_Bntech\\src\\gambar\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement uuid="693e239d-b70a-45f9-b294-d4a256e08323" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="81e80508-901b-4cdd-ba82-5db4609e3bf9" style="Column header" x="0" y="19" width="138" height="15"/>
+				<textElement/>
+				<text><![CDATA[Id Customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="199f3b73-d63e-41a1-a2f7-97592ea3d0e2" style="Column header" x="138" y="19" width="138" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nama Customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="307af83d-b3a6-47f8-935f-f15a8957a5e4" style="Column header" x="276" y="19" width="138" height="15"/>
+				<textElement/>
+				<text><![CDATA[No.Hp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="42059bfa-6926-460f-92df-8f096bdbf329" style="Column header" x="414" y="19" width="138" height="15"/>
+				<textElement/>
+				<text><![CDATA[Alamat Customer]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement uuid="26471938-99a5-4936-bb0d-3d40c4284cf1" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="b6f64edb-efab-4aeb-874e-5d11307c164f" style="Detail" x="0" y="0" width="138" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{id_Customer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d0e1fae2-ce43-41fa-a1ff-c8e12fe48c5b" style="Detail" x="138" y="0" width="138" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_Customer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6b34c0c6-c053-41ac-992a-4907dbea069b" style="Detail" x="276" y="0" width="138" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{noHp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fdbf7664-c2ac-4379-8131-08cc3fe4acb2" style="Detail" x="414" y="0" width="138" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{alamat_Customer}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="349" splitType="Stretch">
+			<line>
+				<reportElement uuid="0db2c38f-ddaf-44e7-be39-9e05b8391a04" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="ca1b38d1-adcb-4f25-9803-0d08f8016dd3" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="36815f5b-1dbf-41b3-94a1-268b7ec2fcac" style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="37d897ee-49cc-4b03-8b9a-0954529656cd" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

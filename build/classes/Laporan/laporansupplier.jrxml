@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="38498bd0-ac84-4966-b983-b3d148f3e7ca">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from supplier order by id_supplier;]]>
+	</queryString>
+	<field name="id_Supplier" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_Supplier" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat_Supplier" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="114" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="646f41b4-9743-4d11-ad7b-1ca5d1ba2d63" x="100" y="32" width="354" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto" size="9"/>
+				</textElement>
+				<text><![CDATA[Sedayu Square Blok J No. 8, Cengkareng Barat, Cengkareng, Jakarta Barat ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="5629bbc8-bae3-4521-a519-a598ebf55d2e" x="0" y="0" width="100" height="72"/>
+				<imageExpression><![CDATA["E:\\Materi Kuliah\\Materi Semester 6\\Pemrograman Visual\\Project_Bntech\\src\\gambar\\logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="19f684bd-0fd1-48c8-9622-09dd9e331285" x="222" y="52" width="111" height="20"/>
+				<textElement>
+					<font fontName="Roboto"/>
+				</textElement>
+				<text><![CDATA[Telp. (021) 5239 5360]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ed9092ac-11ce-43d7-af64-f9d6a23cde22" x="104" y="0" width="347" height="32"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT Shuanghui Power Prima (Bntech Energi)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="db6117ba-4ac1-423c-9882-4dc7f0893bd8" x="206" y="85" width="143" height="19"/>
+				<textElement>
+					<font fontName="Roboto" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Pemasok]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="5629bbc8-bae3-4521-a519-a598ebf55d2e" x="455" y="0" width="100" height="72"/>
+				<imageExpression><![CDATA["E:\\Materi Kuliah\\Materi Semester 6\\Pemrograman Visual\\Project_Bntech\\src\\gambar\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement uuid="9c29f93b-c199-4f39-a877-12699b8fb053" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="2a0d1bc9-da57-40da-8d9e-56e4ae1fdd92" style="Column header" x="0" y="19" width="185" height="15"/>
+				<textElement/>
+				<text><![CDATA[Id Supplier]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="282f23dd-9760-42e0-89b9-8b2ca1552e91" style="Column header" x="185" y="19" width="185" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nama Supplier]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1119ecd7-3c75-401a-b8ab-d8b3c851bcfe" style="Column header" x="370" y="19" width="185" height="15"/>
+				<textElement/>
+				<text><![CDATA[Alamat Supplier]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement uuid="db4dc3cb-868b-4a7d-86cf-020506f5f505" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="dfbe7449-111e-457d-8df4-be242bf7ee3f" style="Detail" x="0" y="0" width="185" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{id_Supplier}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4f436347-4588-42d1-a8ce-76c225b304fb" style="Detail" x="185" y="0" width="185" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_Supplier}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bd8334ea-e5cb-443a-b2e1-017427f764bc" style="Detail" x="370" y="0" width="185" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{alamat_Supplier}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="155" splitType="Stretch">
+			<line>
+				<reportElement uuid="4605b224-aa7b-4835-b5f7-78413156e991" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="ccc0272d-ec05-4fb0-ae4e-dd5c89a6ea65" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="0cadd867-13c5-498c-81b4-32b1ce7b7cfc" style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="92cc1a44-399c-4fd2-bf3f-7fbb374fab6a" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

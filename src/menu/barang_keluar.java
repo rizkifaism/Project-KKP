@@ -128,7 +128,7 @@ public class barang_keluar extends javax.swing.JFrame {
     getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, -1));
 
     jLabel3.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-    jLabel3.setText("ID Customer");
+    jLabel3.setText("ID Pelanggan");
     getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, -1, -1));
 
     jLabel4.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
@@ -170,6 +170,8 @@ public class barang_keluar extends javax.swing.JFrame {
     });
     getContentPane().add(cari_Barang, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 210, -1));
 
+    tombol_Cari.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+    tombol_Cari.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/magnifying-glass.png"))); // NOI18N
     tombol_Cari.setText("CARI");
     tombol_Cari.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,6 +180,8 @@ public class barang_keluar extends javax.swing.JFrame {
     });
     getContentPane().add(tombol_Cari, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 380, -1, -1));
 
+    tombol_Simpan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+    tombol_Simpan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/diskette.png"))); // NOI18N
     tombol_Simpan.setText("SIMPAN");
     tombol_Simpan.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,23 +190,27 @@ public class barang_keluar extends javax.swing.JFrame {
     });
     getContentPane().add(tombol_Simpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 120, 122, -1));
 
+    tombol_Ubah.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+    tombol_Ubah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/edit.png"))); // NOI18N
     tombol_Ubah.setText("UBAH");
     tombol_Ubah.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             tombol_UbahActionPerformed(evt);
         }
     });
-    getContentPane().add(tombol_Ubah, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 122, -1));
+    getContentPane().add(tombol_Ubah, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 200, 122, -1));
 
+    tombol_Hapus.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+    tombol_Hapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/delete.png"))); // NOI18N
     tombol_Hapus.setText("HAPUS");
     tombol_Hapus.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             tombol_HapusActionPerformed(evt);
         }
     });
-    getContentPane().add(tombol_Hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 210, 122, -1));
+    getContentPane().add(tombol_Hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 240, 122, -1));
 
-    tombol_Kembali.setText("<");
+    tombol_Kembali.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/previous.png"))); // NOI18N
     tombol_Kembali.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             tombol_KembaliActionPerformed(evt);
@@ -218,7 +226,7 @@ public class barang_keluar extends javax.swing.JFrame {
             {null, null, null, null, null, null}
         },
         new String [] {
-            "Kode Barang Masuk", "Kode Barang", "Id Customer", "Nama Barang", "Jumlah", "Tanggal"
+            "Kode Barang Masuk", "Kode Barang", "Id Pelanggan", "Nama Barang", "Jumlah Keluar", "Tanggal Keluar"
         }
     ));
     tabel_BarangKeluar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -234,13 +242,15 @@ public class barang_keluar extends javax.swing.JFrame {
     jLabel5.setText("BARANG KELUAR");
     getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, -1, -1));
 
-    tombol_Refresh.setText("REFRESH");
+    tombol_Refresh.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+    tombol_Refresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/refresh.png"))); // NOI18N
+    tombol_Refresh.setText("SEGARKAN");
     tombol_Refresh.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             tombol_RefreshActionPerformed(evt);
         }
     });
-    getContentPane().add(tombol_Refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 150, 122, -1));
+    getContentPane().add(tombol_Refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 160, 122, -1));
 
     jLabel7.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
     jLabel7.setText("Cari Barang");
@@ -376,7 +386,7 @@ public class barang_keluar extends javax.swing.JFrame {
     private void tombol_KembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombol_KembaliActionPerformed
         // TODO add your handling code here:
         dispose();
-        menu r = new menu();
+        menu_logistic r = new menu_logistic();
         r.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_tombol_KembaliActionPerformed
